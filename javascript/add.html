@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function add(a,b)
+    // {
+       
+    //     res = a+b;
+    //     docment.write(res);
+    // }
+    // add(10,20)
+    arr=[10,40,50,80,90,77]
+    for(i=0;i<arr.length;i++){
+        {
+            for(j=0;j<arr.length;j++)
+            {
+                if (arr[i]>arr[j])
+            {
+        temp=arr[i]
+        arr[i]=arr[j]
+        arr[j]=temp
+            }
+        }
+    }
+}
+    var res = arr.length
+    document.write(arr,"<br>")
+    document.write(arr[0],"<br>")
+    document.write(arr[res-1])
+    
+</script>
+</body>
+</html>

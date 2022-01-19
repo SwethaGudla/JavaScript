@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var csvdata = [
+            ["ormtool","hibernate"],
+            ["ormtool","hibernate"],
+            ["ormtool","hibernate"],
+            ["ormtool","hibernate"],
+            ["ormtool","hibernate"],
+        ];
+        function download_csv_data()
+        {
+            alert("hello")
+            var csv_heading = "name,Technology <br>";
+            csvdata.forEach(function(row)
+            {
+                csv_heading+=row.join(',')
+                csv_heading+="<br>";
+
+            }
+            );
+            document.write(csv_heading+"<br>");
+            var hiddenEle = document.createElement('a')
+            hiddenEle.href = 'data:text/csv;charset = utf-8',+encodeURI(csv_heading);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="download_csv_data()">Download CSV</button>
+</body>
+</html>

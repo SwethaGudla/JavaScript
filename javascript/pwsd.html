@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyPassword()
+        {
+            var pwd = document.getElementById('pswd').value;
+            if(pwd=="")
+            {
+                document.getElementById("message").innerHTML="**Fill the password please";
+                return false;
+            }
+            if(pwd.length<8)
+            {
+                document.getElementById("message").innerHTML="**Password length must be 8 characters";
+                return false;
+            }
+            if(pwd.length>15) 
+            {
+                document.getElementById("message").innerHTML="** password must be below 15 characters";
+                return false;
+            }
+            else
+            {
+                alert("password is valid")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit = "return verifyPassword()">
+        <td>Enter the Password</td>
+    <input type = "password" id = "pswd" value="">
+    <span id = "message" style = "color:red"></span><br><br>
+    <input type = "submit" value="ClickMe">
+    <button type = "rest">Reset</button>
+    </form>
+</body>
+</html>

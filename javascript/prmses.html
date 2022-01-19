@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let promise1 = new Promise((resolve,reject)=>
+        // {
+        //     resolve("welcome to promise");
+        // })
+        // promise1.then((PosRes)=>{
+        //     document.write(PosRes);
+        // },
+        // (errRes)=>
+        // {
+        //     document.write(errRes);
+        // })
+        let promise1= new Promise((resolve,reject)=>
+        {
+            setTimeout(()=>
+            {
+                document.write("Hello swetha");
+            },5000);
+        });
+        promise1.then((postRes)=>
+        {
+            document.write(posRes);
+        },
+        (errRes)=>
+        {
+            document.write(errRes);
+        })
+    </script>
+</body>
+</html>
